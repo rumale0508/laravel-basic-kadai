@@ -18,4 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// 投稿一覧
 Route::get('/posts', [PostController::class, 'index']);
+
+// 可変のIDを持つ投稿表示
+Route::get('/posts/{id}', [PostController::class, 'show']);
